@@ -1,39 +1,43 @@
-import React from "react";
-import { tv, type VariantProps } from "tailwind-variants";
+import type React from "react";
 import { twMerge } from "tailwind-merge";
+import { tv, type VariantProps } from "tailwind-variants";
 
-const style = tv({
-  base: "bg-slate-50 text-slate-800 font-medium tracking-tight rounded-lg px-4 py-2",
+export const buttonStyle = tv({
+  base: "flex select-none cursor-pointer justify-center rounded-md bg-transparent transition duration-150 focus:outline-pinkish disabled:bg-slate-50 disabled:text-neutral-400",
   variants: {
     variant: {
-      primary: "bg-indigo-600 text-white",
-      secondary: "bg-slate-200 text-slate-700",
-      outline: "bg-transparent border border-slate-0",
-      ghost: "bg-transparent text-slate-300",
+      primary:
+        "bg-indigo-600 text-white hover:bg-indigo-600 focus:bg-indigo-600 active:ring-0",
+      secondary:
+        "bg-indigo-50 text-indigo-600 hover:text-indigo-400 focus:text-indigo-400 active:text-indigo-900 active:ring-0",
+      outlined:
+        "bg-white text-neutral-900 ring-1 ring-border hover:bg-zinc-50 hover:ring-border focus:bg-zinc-50 active:ring-0",
+      text: "bg-transparent text-indigo-600 hover:bg-indigo-400 focus:bg-indigo-400 active:text-indigo-900 active:ring-0",
+      danger:
+        "bg-rose-600 text-white hover:bg-rose-400 active:bg-rose-900 active:ring-0",
     },
     size: {
-      sm: "px-2.5 py-1.5 text-sm",
-      md: "px-3.5 py-2.5 text-base",
-      lg: "px-5 py-3 text-lg",
+      sm: "px-4 py-1 text-xs",
+      md: "px-4 py-1.5 text-sm",
+      lg: "px-4 py-2 text-base",
     },
   },
   defaultVariants: {
     variant: "primary",
-    size: "sm",
+    size: "md",
   },
 });
 
-type TButton = VariantProps<typeof style>;
+type ButtonStyle = VariantProps<typeof buttonStyle>;
 
-interface Props extends TButton, React.ComponentPropsWithRef<"button"> {
-  children: React.ReactNode;
-}
+interface ButtonProps
+  extends ButtonStyle, React.ComponentPropsWithRef<"button"> {}
 
-export const Button = (props: Props) => {
+export const Button = (props: ButtonProps) => {
   return (
     <button
       {...props}
-      className={twMerge(style({ ...props }), props.className)}
+      className={twMerge(buttonStyle({ ...props }), props.className)}
     >
       {props.children}
     </button>
