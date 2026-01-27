@@ -1,7 +1,9 @@
 export default function Home() {
   return (
-    <>
-      <h1 className="bg-pinkish">Halo</h1>
-    </>
+    <main className="flex h-screen items-center justify-center">
+      <h1 className="font-medium text-3xl tracking-tight">
+        Woo, nothing here!
+      </h1>
+    </main>
   );
 }
