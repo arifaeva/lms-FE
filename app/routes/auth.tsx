@@ -4,12 +4,12 @@ import { DevscaleIcon } from "~/components/icons/devscale.icon";
 export default function AuthLayout() {
   return (
     <main className="grid h-dvh xl:grid-cols-[496px_1fr]">
-      <div className="pointer-events-none relative z-10 hidden flex-col justify-end bg-linear-to-b from-indigo-900 via-indigo-600 to-indigo-600 p-10.5 text-white *:z-10 xl:flex">
+      <div className="pointer-events-none relative z-10 hidden flex-col justify-end bg-linear-to-b from-indigo-900 via-indigo-700 to-indigo-600 p-10.5 text-white *:z-10 xl:flex">
         <div className="hidden xl:block"> </div>
-        <p className="mb-2 text-balance font-bold text-5xl">
+        <p className="mb-2 text-balance font-bold text-5xl text-white">
           Unlock your 100% Potential
         </p>
-        <p className="text-balance leading-6">
+        <p className="text-balance leading-6 text-white text-base">
           Devscale Indonesia membantu para student untuk berkembang 10x lebih
           cepat daripada belajar otodidak.
         </p>
