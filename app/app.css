@@ -7,3 +7,12 @@
 
   --color-pinkish: #e1ccfa;
 }
+
+@layer base {
+  h1 {
+    @apply text-3xl font-semibold text-neutral-900;
+  }
+  p {
+    @apply text-sm font-normal text-neutral-500;
+  }
+}
