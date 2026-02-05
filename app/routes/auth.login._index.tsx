@@ -1,6 +1,6 @@
 import type { ActionFunctionArgs } from "react-router";
 import { redirect, useActionData, Form, Link } from "react-router";
-// import { json } from "@remix-run/node";
+
 import { Input } from "~/components/ui/input";
 import { Button } from "~/components/ui/button";
 import { API_URL } from "~/config/api.url";
@@ -23,7 +23,6 @@ export async function action({ request }: ActionFunctionArgs) {
     }),
   });
 
-  // 🔥 grab the cookie from backend
   const setCookie = res.headers.get("set-cookie");
 
   if (!res.ok) {
@@ -31,7 +30,6 @@ export async function action({ request }: ActionFunctionArgs) {
     return { error: data };
   }
 
-  // ⭐ forward it to the browser
   return redirect("/dashboard", {
     headers: {
       "Set-Cookie": setCookie ?? "",
