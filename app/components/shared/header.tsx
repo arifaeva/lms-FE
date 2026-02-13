@@ -2,6 +2,7 @@ import React, { type ComponentPropsWithRef } from "react";
 import { twMerge } from "tailwind-merge";
 import { BellIcon } from "../icons/bell.icon";
 import { MoonAndStar } from "../icons/moon-and-star.icon";
+import { ProfileMenu } from "../ui/profile-menu";
 
 export interface HeaderProps extends ComponentPropsWithRef<"header"> {
   children: React.ReactNode;
@@ -18,13 +19,10 @@ export const Header = ({ children, className, ...props }: HeaderProps) => {
       )}
     >
       {children}
-
       <div className="flex items-center gap-4 text-indigo-600">
         <BellIcon className="size-5" />
         <MoonAndStar className="size-5" />
-        <div className="size-10 overflow-hidden rounded-md object-cover">
-          <img className="w-full rounded-md" src="/photo.png" alt="profile" />
-        </div>
+        <ProfileMenu />
       </div>
     </header>
   );
