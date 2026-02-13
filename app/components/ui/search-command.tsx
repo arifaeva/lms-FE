@@ -66,7 +66,7 @@ const Input = (
     />
     <CommandPrimitive.Input
       {...props}
-      className={twMerge("flex-1 text-base outline-none", props.className)}
+      className={twMerge("flex-1 text-sm outline-none", props.className)}
       placeholder="Type a command or search..."
     />
   </div>
@@ -81,7 +81,7 @@ const Item = ({
   <CommandPrimitive.Item
     {...props}
     className={twMerge(
-      "group flex items-center gap-3 p-2 text-foreground-secondary",
+      "group flex items-center gap-3 p-2 text-neutral-500",
       className,
     )}
   />
@@ -96,7 +96,7 @@ const Group = ({
   <CommandPrimitive.Group
     {...props}
     className={twMerge(
-      'p-2 **:[[cmdk-group-heading]]:px-2 **:[[cmdk-group-heading]]:py-1.5 **:[[cmdk-group-heading]]:font-medium **:[[cmdk-group-heading]]:text-foreground-muted **:[[cmdk-group-heading]]:text-xss **:[[cmdk-group-heading]]:uppercase [&_[cmdk-item][data-selected="true"]]:bg-brand-surface [&_[cmdk-item][data-selected="true"]]:text-brand',
+      'p-2 **:[[cmdk-group-heading]]:px-2 **:[[cmdk-group-heading]]:py-1.5 **:[[cmdk-group-heading]]:font-medium **:[[cmdk-group-heading]]:text-slate-600 **:[[cmdk-group-heading]]:text-[10px] **:[[cmdk-group-heading]]:uppercase [&_[cmdk-item][data-selected="true"]]:bg-indigo-50 [&_[cmdk-item][data-selected="true"]]:text-indigo-600',
       className,
     )}
   />
@@ -113,7 +113,7 @@ const DialogContent = ({
     <DialogOverlay />
     <DialogPrimitive.Content
       className={twMerge(
-        "-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 z-50 w-172.5 rounded-lg bg-background transition-all",
+        "-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 z-50 w-172.5 rounded-lg bg-white transition-all",
         className,
       )}
       {...props}
@@ -136,35 +136,35 @@ const Separator = ({
   ...props
 }: ComponentPropsWithoutRef<typeof CommandPrimitive.Separator>) => (
   <CommandPrimitive.Separator
-    className={twMerge("-mx-1 h-px bg-border-muted", className)}
+    className={twMerge("-mx-1 h-px bg-slate-200", className)}
     {...props}
   />
 );
 
 const Footer = () => (
-  <div className="flex items-center justify-between bg-background-muted px-4 py-3 text-foreground-muted text-sm">
-    <DevscaleIcon className="h-5 w-min" />
+  <div className="flex items-center justify-between bg-slate-50 px-4 py-4 text-slate-600 text-xs">
+    <DevscaleIcon className="h-8 w-min" />
     <div className="flex items-center space-x-2.5">
-      <div className="flex items-center space-x-1">
+      <div className="flex items-center space-x-1 text-sm">
         <span>Navigate</span>
         <Icon
           icon="solar:arrow-up-outline"
-          className="h-5 min-h-5 w-5 min-w-5 rounded border border-border p-1"
+          className="h-5 min-h-5 w-5 min-w-5 rounded border border-neutral-200 p-1"
         />
         <Icon
           icon="solar:arrow-down-outline"
-          className="h-5 min-h-5 w-5 min-w-5 rounded border border-border p-1"
+          className="h-5 min-h-5 w-5 min-w-5 rounded border border-neutral-200 p-1"
         />
       </div>
       <div className="flex items-center space-x-1 text-sm">
         <span>Select</span>
-        <kbd className="block rounded border border-border px-2 py-1 font-[inherit] text-xxs">
+        <kbd className="block rounded border border-neutral-200 px-2 py-1 font-[inherit] text-[10px]">
           Enter
         </kbd>
       </div>
       <div className="flex items-center space-x-1 text-sm">
         <span>Quit</span>
-        <kbd className="block rounded border border-border px-2 py-1 font-[inherit] text-xxs">
+        <kbd className="block rounded border border-neutral-200 px-2 py-1 font-[inherit] text-[10px]">
           Esc
         </kbd>
       </div>
