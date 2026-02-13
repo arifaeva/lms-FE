@@ -13,5 +13,7 @@ export default [
     route("auth/register", "routes/auth.register._index.tsx"),
   ]),
 
-  route("dashboard", "routes/dashboard.tsx"),
+  layout("routes/dashboard.tsx", [
+    route("/dashboard", "routes/dashboard._index.tsx"),
+  ]),
 ] satisfies RouteConfig;
