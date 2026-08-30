@@ -1,4 +1,9 @@
-import { Outlet, useLoaderData, type LoaderFunctionArgs } from "react-router";
+import {
+  Outlet,
+  redirect,
+  useLoaderData,
+  type LoaderFunctionArgs,
+} from "react-router";
 import { Sidebar } from "~/components/shared/sidebar";
 
 import { Icon } from "@iconify/react";
@@ -18,7 +23,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
   });
 
   if (!response.ok) {
-    throw new Response("Unauthorized", { status: 401 });
+    throw redirect("/auth/login");
   }
 
   const data = await response.json();
