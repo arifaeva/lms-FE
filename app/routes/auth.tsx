@@ -14,15 +14,20 @@ export default function AuthLayout() {
           cepat daripada belajar otodidak.
         </p>
       </div>
-      <div className="flex flex-col justify-between">
-        <nav className="p-4 sm:px-8 sm:py-7">
-          <Link to="/" className="outline-[3px] focus:outline-pinkish">
-            <DevscaleIcon />
+
+      <div className="relative">
+        <nav className="absolute left-0 top-0 w-full p-4 sm:px-8 sm:py-7">
+          <Link to="/">
+            <DevscaleIcon className="h-8 w-auto" />
           </Link>
         </nav>
-        <Outlet />
-        <footer className="flex items-center justify-center p-6 text-neutral-500">
-          <p> &#169;2024 Devscale Indonesia</p>
+
+        <div className="flex h-full items-center justify-center">
+          <Outlet />
+        </div>
+
+        <footer className="absolute bottom-0 left-0 w-full p-6 text-center text-neutral-500">
+          <p>©Devscale Indonesia</p>
         </footer>
       </div>
     </main>
