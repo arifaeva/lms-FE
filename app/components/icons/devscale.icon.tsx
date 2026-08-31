@@ -1,9 +1,7 @@
-import type { ComponentPropsWithRef } from "react";
+import type { SVGProps } from "react";
 import { twMerge } from "tailwind-merge";
 
-export type SvgProps = ComponentPropsWithRef<"svg">;
-
-export function DevscaleIcon(props: SvgProps) {
+export const DevscaleIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       {...props}
@@ -26,4 +24,4 @@ export function DevscaleIcon(props: SvgProps) {
       <path d="M142.727 31.5317C144.386 31.5317 145.731 30.1867 145.731 28.5275C145.731 26.8683 144.386 25.5233 142.727 25.5233C141.068 25.5233 139.723 26.8683 139.723 28.5275C139.723 30.1867 141.068 31.5317 142.727 31.5317Z" />
     </svg>
   );
-}
+};

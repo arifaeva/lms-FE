@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-export function CertificateIcon(props: SVGProps<SVGSVGElement>) {
+export const CertificateIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,4 +17,4 @@ export function CertificateIcon(props: SVGProps<SVGSVGElement>) {
       />
     </svg>
   );
-}
+};

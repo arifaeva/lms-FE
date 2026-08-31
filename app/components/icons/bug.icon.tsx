@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-export function BugIcon(props: SVGProps<SVGSVGElement>) {
+export const BugIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -18,4 +18,4 @@ export function BugIcon(props: SVGProps<SVGSVGElement>) {
       </g>
     </svg>
   );
-}
+};

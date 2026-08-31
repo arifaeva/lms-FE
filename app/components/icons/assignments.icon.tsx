@@ -1,8 +1,6 @@
-import type { ComponentPropsWithRef } from "react";
+import type { SVGProps } from "react";
 
-export type SvgProps = ComponentPropsWithRef<"svg">;
-
-export default function AssignmentsIcon(props: SvgProps) {
+export const AssignmentsIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="1em"
@@ -20,4 +18,4 @@ export default function AssignmentsIcon(props: SvgProps) {
       />
     </svg>
   );
-}
+};

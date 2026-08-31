@@ -1,12 +1,12 @@
 import { isExpandedAtom } from "~/atoms/sidebar.atom";
 
 import { ArchiveIcon } from "../icons/archive.icon";
-import AssignmentsIcon from "../icons/assignments.icon";
+import { AssignmentsIcon } from "../icons/assignments.icon";
 import { BugIcon } from "../icons/bug.icon";
 import { CertificateIcon } from "../icons/certificate.icon";
 import { CommandIcon } from "../icons/command.icon";
 import { CourseIcon } from "../icons/course.icon";
-import DevscaleLogo from "../icons/devscale-logo.icon";
+import { DevscaleLogo } from "../icons/devscale-logo.icon";
 import { ForumIcon } from "../icons/forum.icon";
 import { GuideIcon } from "../icons/guide.icon";
 import { NotesIcon } from "../icons/notes.icon";

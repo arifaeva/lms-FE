@@ -1,8 +1,6 @@
-import type { ComponentPropsWithRef } from "react";
+import type { SVGProps } from "react";
 
-export type SvgProps = ComponentPropsWithRef<"svg">;
-
-export default function DevscaleLogo(props: SvgProps) {
+export const DevscaleLogo = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -66,4 +64,4 @@ export default function DevscaleLogo(props: SvgProps) {
       </defs>
     </svg>
   );
-}
+};

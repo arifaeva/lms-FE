@@ -1,6 +1,6 @@
 import type { SVGProps } from "react";
 
-export function MentorIcon(props: SVGProps<SVGSVGElement>) {
+export const MentorIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -25,4 +25,4 @@ export function MentorIcon(props: SVGProps<SVGSVGElement>) {
       />
     </svg>
   );
-}
+};
