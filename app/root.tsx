@@ -9,6 +9,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import NotAvailable from "./components/shared/notavailable";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -32,8 +33,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
+
       <body>
-        {children}
+        <div className="block lg:hidden">
+          <NotAvailable />
+        </div>
+
+        <div className="hidden lg:block">{children}</div>
+
         <ScrollRestoration />
         <Scripts />
       </body>
